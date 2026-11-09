@@ -1,0 +1,30 @@
+# JointDecGATv14 — the proposed decentralized overlap-aware selector.
+# Parameter count is matched against the CNN (222,166) and MLP (219,859)
+# baselines to within 1.1 %, so no comparison is confounded by capacity.
+model:
+  name: JointDecGATv14
+  params: 221125
+  hidden_dim: 80
+  message_rounds: 4          # R
+  beam_attention_layers: 3   # L
+  learned_overlap_coeffs: [2.290981, -1.733848, -0.841632]  # w^(l), frozen checkpoint
+
+training:
+  objective: "beam BCE + 0.5 * association CE"   # expert imitation, not policy gradient
+  teacher: swap_refinement_search
+  optimizer: adam
+  lr: 0.001
+  max_epochs: 40
+  seeds: [11, 22, 33, 44, 55]
+  checkpoint_selection: validation_gm_only       # test set is never consulted
+
+inference:
+  beam_selection: hard_top_k                     # budget satisfied by construction
+  association: distributed_pf_best_response
+  pf_iteration_budget: 10
+
+baselines:
+  matched_cnn2d: {params: 222166}
+  matched_pooled_mlp: {params: 219859}
+  naive: "strongest-beam popularity + PF"
+  reference: "multi-start swap-refinement search (NOT a certified optimum)"

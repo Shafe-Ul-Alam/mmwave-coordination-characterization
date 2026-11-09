@@ -1,0 +1,31 @@
+# Protocol A — receiver-ID-disjoint split (the headline protocol of the paper)
+# Reproduces: 183,610 train / 39,345 val / 39,346 test receivers, zero overlap.
+protocol: receiver_id_disjoint
+seed: 20240501
+
+dataset:
+  name: DeepMIMO
+  scenario: o1_28
+  tx_sets: [3, 4, 5]
+  rx_set: 0
+
+split:
+  train_frac: 0.70
+  val_frac: 0.15          # test pool is the remainder
+
+groups:
+  users_per_group: 181    # spread, sampled without replacement inside a pool
+  n_train_groups: 2000
+  n_val_groups: 200
+  n_test_groups: 300
+
+normalization:
+  # computed from TRAINING GROUPS ONLY — never from val or test
+  source: train_only
+  log10_mean: -14.539311
+  log10_std: 1.263322
+
+system:
+  n_bs: 3
+  n_beams: 64             # DFT codebook
+  b_rf: 8                 # hard top-K active-beam budget

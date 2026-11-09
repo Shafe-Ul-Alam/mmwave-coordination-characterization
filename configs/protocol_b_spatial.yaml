@@ -1,0 +1,31 @@
+# Protocol B — guard-banded coordinate-spatial holdout
+# Test region is physically separated from the training region.
+protocol: spatial_guard
+seed: 20240501
+
+dataset:
+  name: DeepMIMO
+  scenario: o1_28
+  tx_sets: [3, 4, 5]
+  rx_set: 0
+
+split:
+  train_frac: 0.70
+  val_frac: 0.15
+  guard_m: 13.8           # minimum test-to-train separation, metres
+
+groups:
+  users_per_group: 181
+  n_train_groups: 2000
+  n_val_groups: 200
+  n_test_groups: 300
+
+normalization:
+  source: train_only
+  log10_mean: -14.376154
+  log10_std: 1.212346
+
+system:
+  n_bs: 3
+  n_beams: 64
+  b_rf: 8

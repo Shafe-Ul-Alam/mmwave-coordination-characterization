@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this protocol, audit tool or harness, please cite the paper below."
+title: "Leakage-Free Beam Selection Benchmark and Coordination Characterisation"
+authors:
+  - family-names: "Alam"
+    given-names: "Md. Shafe Ul"
+    affiliation: "Khulna University of Engineering & Technology"
+  - family-names: "Choudhury"
+    given-names: "Pallab Kumar"
+    affiliation: "Khulna University of Engineering & Technology"
+license: MIT
+repository-code: "https://github.com/<user>/mmwave-coordination-characterization"
+preferred-citation:
+  type: article
+  title: "When Does Inter-Cell Coordination Pay in Limited-Beam mmWave Selection? A Decoupling Theory and Leakage-Free Characterisation"
+  authors:
+    - family-names: "Alam"
+      given-names: "Md. Shafe Ul"
+    - family-names: "Choudhury"
+      given-names: "Pallab Kumar"
+  journal: "IEEE Transactions on Vehicular Technology"
+  year: 2026
+  notes: "Under review"
