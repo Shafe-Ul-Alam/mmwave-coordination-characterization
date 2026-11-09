@@ -9,7 +9,7 @@ authors:
     given-names: "Pallab Kumar"
     affiliation: "Khulna University of Engineering & Technology"
 license: MIT
-repository-code: "https://github.com/<user>/mmwave-coordination-characterization"
+repository-code: "https://github.com/Shafe-Ul-Alam/mmwave-coordination-characterization"
 preferred-citation:
   type: article
   title: "When Does Inter-Cell Coordination Pay in Limited-Beam mmWave Selection? A Decoupling Theory and Leakage-Free Characterisation"

@@ -38,8 +38,8 @@ The extraction is checked three ways by `scripts/verify_models.py`:
 1. `python scripts/fetch_results.py --drive /path/to/MyDrive/Thesis`
 2. `python scripts/verify_release.py` and `python scripts/verify_models.py`;
    commit both outputs.
-3. Replace `<user>` in `README.md`, `CITATION.cff` and the paper's `\thanks`
-   footnote with the real GitHub account.
+3. ~~Replace the GitHub placeholder~~ — done. Published at
+   <https://github.com/Shafe-Ul-Alam/mmwave-coordination-characterization>.
 4. Archive a tagged release on Zenodo; put the DOI in `CITATION.cff` and in the
    paper's reproducibility footnote.
 

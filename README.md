@@ -150,7 +150,7 @@ use the protocol or the audit, please cite the paper (see `CITATION.cff`).
 
 ## Citing and obtaining this release
 
-Repository: <https://github.com/<user>/mmwave-coordination-characterization>
+Repository: <https://github.com/Shafe-Ul-Alam/mmwave-coordination-characterization>
 
 A tagged archive with a DOI is deposited on Zenodo; cite that DOI rather than
 the branch. See `CITATION.cff`.
