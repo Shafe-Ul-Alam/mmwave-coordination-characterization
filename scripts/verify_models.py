@@ -61,12 +61,24 @@ for cls in (JointDecGATv14Batch, JointDecGATv14Ablation,
     check(n == exp, f"{name}", f"{n:,} (expected {exp:,})")
 
 print("\n2. Capacity matching claimed in the paper")
-counts = {k: sum(p.numel() for p in c().parameters())
-          for k, c in [("gnn", JointDecGATv14Batch), ("mlp", MatchedPooledMLP),
-                       ("cnn", MatchedCNN2D)]}
-spread = max(counts.values()) / min(counts.values()) - 1.0
-check(spread <= 0.01, "all learned models within 1% of each other",
-      f"spread {100 * spread:.2f}%")
+# The paper's claim (Section VI-D) is that each matched baseline sits within
+# +/-1% of the PROPOSED model's parameter count, not that the two baselines sit
+# within 1% of each other. Those are different quantities: the deviations are
+# -0.57% and +0.47%, so the baselines satisfy the claim, while the spread
+# between the two extremes is 1.05%. We test the claim the paper actually makes.
+reference = sum(p.numel() for p in JointDecGATv14Batch().parameters())
+for cls in (MatchedPooledMLP, MatchedCNN2D):
+    n = sum(p.numel() for p in cls().parameters())
+    dev = (n - reference) / reference
+    check(abs(dev) <= 0.01,
+          f"{cls.__name__} within 1% of the proposed model",
+          f"{100 * dev:+.2f}%  ({n:,} vs {reference:,})")
+spread = (max(sum(p.numel() for p in c().parameters())
+              for c in (JointDecGATv14Batch, MatchedPooledMLP, MatchedCNN2D))
+          / min(sum(p.numel() for p in c().parameters())
+                for c in (JointDecGATv14Batch, MatchedPooledMLP, MatchedCNN2D)) - 1.0)
+print(f"         (for reference, the spread between the two extremes is "
+      f"{100 * spread:.2f}%; the paper does not claim this is below 1%)")
 
 print("\n3. Forward pass produces the documented shapes")
 torch.manual_seed(0)
