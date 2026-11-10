@@ -1,0 +1,18 @@
+{
+  "search_reference_gm_mean": 0.00037227794457314183,
+  "search_reference_gm_std_across_groups": 1.7051690410404936e-05,
+  "search_reference_gm_coefficient_of_variation": 0.04580365465903869,
+  "search_reference_unique_selected_subsets": 184,
+  "proposed_exact_subset_match_rate_vs_search": 0.034,
+  "proposed_efficiency_fraction_above_1_plus_1e-6": 0.06466666666666666,
+  "proposed_efficiency_fraction_above_1_plus_1e-4": 0.04666666666666667,
+  "mean_unique_proposed_subsets_per_group_across_5_seeds": 3.6933333333333334,
+  "fraction_groups_all_5_seeds_same_subset": 0.006666666666666667,
+  "mean_group_log_gain_std": 1.1666398974349306,
+  "mean_unique_strongest_beams_per_bs_group": 9.626666666666667,
+  "interpretation_guardrails": {
+    "search_reference_is_optimum": false,
+    "efficiency_slightly_above_one_is_possible": "A learned subset can marginally outperform the deterministic heuristic search reference.",
+    "near_constant_validation_metrics_require_test_diversity_audit": true
+  }
+}

@@ -1,0 +1,16 @@
+\begin{table*}[t]
+\centering
+\caption{Clean five-seed component ablation on 300 receiver-ID-disjoint held-out groups. Positive removal penalties indicate that the full model performed better.}
+\label{tab:clean_component_ablation}
+\begin{tabular}{lrrrrrr}
+\toprule
+Method & PF efficiency & GM rate & p5 rate & Jain & Redundancy & Efficiency penalty \\
+\midrule
+Proposed clean v14 + PF & 0.961847$\pm$0.001875 & 2.768685e-04 & 4.151500e-05 & 0.235273 & 0.087455 & +0.000000 \\
+No overlap attention + PF & 0.954574$\pm$0.001671 & 2.747252e-04 & 4.195524e-05 & 0.241014 & 0.096912 & +0.007273 \\
+No redundancy feature + PF & 0.962289$\pm$0.001149 & 2.769915e-04 & 4.214811e-05 & 0.242041 & 0.092360 & -0.000442 \\
+No message passing + PF & 0.963358$\pm$0.001476 & 2.772978e-04 & 4.190737e-05 & 0.240904 & 0.090782 & -0.001512 \\
+No beam attention + PF & 0.916164$\pm$0.001812 & 2.637336e-04 & 3.955430e-05 & 0.192884 & 0.103480 & +0.045683 \\
+\bottomrule
+\end{tabular}
+\end{table*}

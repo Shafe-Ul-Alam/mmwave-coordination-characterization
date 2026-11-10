@@ -1,0 +1,11 @@
+{
+  "block_frames": 2000,
+  "purge": 9,
+  "W": 8,
+  "H": 1,
+  "leakage_audit": "zero shared raw frames (asserted)",
+  "protocols": [
+    "strict_source_only",
+    "target_calibration"
+  ]
+}

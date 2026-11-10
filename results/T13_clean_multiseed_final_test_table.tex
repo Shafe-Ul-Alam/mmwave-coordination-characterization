@@ -1,0 +1,18 @@
+\begin{table}[t]
+\centering
+\caption{Final clean held-out test performance averaged over 300 groups. The proposed method is averaged over five validation-selected seeds. The search reference is heuristic and not a certified optimum.}
+\label{tab:clean_final_test}
+\begin{tabular}{lccc}
+\toprule
+Metric & Naive+PF & Proposed & Search reference \\
+\midrule
+PF efficiency vs search & 0.900187 & 0.961847 & 1 \\
+Geometric-mean user rate & 0.000259093 & 0.000276868 & 0.000287894 \\
+5th-percentile user rate & 4.55426e-05 & 4.1515e-05 & 4.47183e-05 \\
+Jain fairness & 0.368208 & 0.235273 & 0.238679 \\
+Load standard deviation & 5.97143 & 5.56496 & 5.39073 \\
+Selected-set redundancy & 0.136289 & 0.0874551 & 0.0724866 \\
+PF convergence rate & 1 & 1 & 1 \\
+\bottomrule
+\end{tabular}
+\end{table}

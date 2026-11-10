@@ -1,0 +1,16 @@
+\begin{table*}[t]
+\centering
+\caption{Final clean receiver-ID-disjoint test comparison with parameter-matched learned baselines. Learned methods report five validation-selected seeds over 300 held-out groups. The search reference is heuristic and is not a certified optimum.}
+\label{tab:matched_clean_baselines}
+\begin{tabular}{lrrrrr}
+\toprule
+Method & PF efficiency & GM rate & p5 rate & Jain & Redundancy \\
+\midrule
+Naive + PF & 0.900187 & 2.590927e-04 & 4.554261e-05 & 0.368208 & 0.136289 \\
+Matched Pooled MLP + PF & 0.864412$\pm$0.002020 & 2.487194e-04 & 4.473129e-05 & 0.405656 & 0.158513 \\
+Matched CNN + PF & 0.973129$\pm$0.001650 & 2.801124e-04 & 4.169566e-05 & 0.239463 & 0.088793 \\
+Proposed clean v14 + PF & 0.961847$\pm$0.001875 & 2.768685e-04 & 4.151500e-05 & 0.235273 & 0.087455 \\
+Search reference & 1.000000 & 2.878942e-04 & 4.471832e-05 & 0.238679 & 0.072487 \\
+\bottomrule
+\end{tabular}
+\end{table*}

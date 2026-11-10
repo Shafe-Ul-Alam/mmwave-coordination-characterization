@@ -1,0 +1,16 @@
+\begin{table*}[t]
+\centering
+\caption{Primary paired group-level PF-efficiency comparisons on the clean held-out test. Positive differences favor the left method.}
+\label{tab:matched_clean_paired}
+\begin{tabular}{lrrrrr}
+\toprule
+Comparison & Mean difference & 95\% CI & $p$ & $d_z$ & Left win rate \\
+\midrule
+Proposed minus Matched CNN & -0.011282 & [-0.013697, -0.008899] & 4.99975e-05 & -0.539 & 29.0\% \\
+Proposed minus Matched Pooled MLP & +0.097434 & [+0.093022, +0.101788] & 4.99975e-05 & 2.516 & 99.3\% \\
+Matched CNN minus Naive & +0.072941 & [+0.069019, +0.076768] & 4.99975e-05 & 2.119 & 98.3\% \\
+Matched Pooled MLP minus Naive & -0.035775 & [-0.039626, -0.032030] & 4.99975e-05 & -1.090 & 12.0\% \\
+Proposed minus Naive & +0.061659 & [+0.057644, +0.065772] & 4.99975e-05 & 1.695 & 96.7\% \\
+\bottomrule
+\end{tabular}
+\end{table*}

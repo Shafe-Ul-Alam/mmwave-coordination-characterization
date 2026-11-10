@@ -1,0 +1,16 @@
+\begin{table*}[t]
+\centering
+\caption{Paired clean held-out PF-efficiency comparisons between the full JointDecGATv14 model and its retrained component ablations.}
+\label{tab:clean_component_ablation_statistics}
+\begin{tabular}{lrrrrr}
+\toprule
+Comparison & Mean difference & 95\% CI & $p$ & $d_z$ & Full-model win rate \\
+\midrule
+Full minus NoOverlapAttention & +0.007273 & [+0.005555, +0.008934] & 4.99975e-05 & 0.483 & 67.0\% \\
+Full minus NoRedundancyFeature & -0.000442 & [-0.001598, +0.000708] & 0.451427 & -0.043 & 48.3\% \\
+Full minus NoMessagePassing & -0.001512 & [-0.002431, -0.000586] & 0.00189991 & -0.183 & 42.3\% \\
+Full minus NoBeamAttention & +0.045683 & [+0.041961, +0.049331] & 4.99975e-05 & 1.391 & 93.0\% \\
+Full minus Naive & +0.061659 & [+0.057515, +0.065825] & 4.99975e-05 & 1.695 & 96.7\% \\
+\bottomrule
+\end{tabular}
+\end{table*}

@@ -1,0 +1,5 @@
+model_name,method,parameter_count,parameter_memory_bytes_float32,parameter_memory_KiB_float32,neural_outgoing_bytes_per_bs_per_decision,neural_outgoing_KiB_per_bs_per_decision,neural_network_total_directed_bytes_per_decision,neural_network_total_directed_MiB_per_decision,equivalent_remote_feature_gather_bytes,equivalent_remote_feature_gather_KiB,global_input_tensor_bytes,global_input_tensor_KiB,communication_mode,pf_scalar_signalling_included,protocol_headers_included
+JointDecGATv14,Proposed JointDecGATv14,221125,884500,863.76953125,463360,452.5,1390080,1.32568359375,0,0.0,139008,135.75,Four-round directed inter-BS hidden-state exchange,False,False
+NoMessagePassing,No message passing,221125,884500,863.76953125,0,0.0,0,0.0,0,0.0,139008,135.75,No neural hidden-state exchange,False,False
+MatchedPooledMLP,Matched Pooled MLP,219859,879436,858.82421875,0,0.0,0,0.0,92672,90.5,139008,135.75,Centralized global-input tensor; equivalent remote feature gathering reported,False,False
+MatchedCNN2D,Matched CNN2D,222166,888664,867.8359375,0,0.0,0,0.0,92672,90.5,139008,135.75,Centralized global-input tensor; equivalent remote feature gathering reported,False,False
