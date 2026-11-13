@@ -35,7 +35,7 @@ WANTED = {
     "spread64_clean_uid_v3/q1_data/T27_clean_runtime_communication_accounting.csv":
         "signalling column",
     "spread64_clean_uid_v3/q1_data/clean_runtime_forward_summary.csv":
-        "latency column (reported as provisional)",
+        "SUPERSEDED latency (kept for provenance; see results/README.md)",
     "spread64_clean_uid_v3/q1_data/clean_validation_csi_noise_summary.csv":
         "CSI-noise robustness",
     "spread64_clean_uid_v3/q1_data/clean_validation_pf_iteration_summary.csv":
@@ -59,13 +59,30 @@ WANTED = {
         "eta and the epsilon distribution",
     "spread64_clean_uid_v3/q1_data/Cell220U_joint_epsilon_emin.json":
         "joint (eps_u, e_u) distribution for Proposition 4",
+    "spread64_clean_uid_v3/q1_data/Cell220G3_submodularity_nested.json":
+        "Sec. IV-D, nested-set submodularity test and the kappa sweep",
+    "spread64_clean_uid_v3/q1_data/Cell220G3b_zero_gain_audit.json":
+        "Sec. IV-D, zero-gain audit behind the floor discussion",
+    "spread64_clean_uid_v3/q1_data/Cell220G4b_latency_paired.json":
+        "Table VII, GPU latency with the identical-computation control",
+    "spread64_clean_uid_v3/q1_data/Cell220G4c_latency_cpu.json":
+        "Table VII, CPU latency under the same harness",
     # ---- DeepSense 6G ----
     "deepsense_corrected/deepsense_E5_corrected.csv":
         "Table XI, corrected cross-site protocol",
     "deepsense_corrected/deepsense_E5_protocol.json":
         "split and normalisation protocol record",
+    "deepsense_corrected/deepsense_G5_onset.csv":
+        "Table XIV, event-level blockage onset",
+    "deepsense_corrected/deepsense_G5_protocol.json":
+        "onset task definition and operating-point rule",
     "deepsense_multiscenario_E1.json":
         "in-domain results (UNCORRECTED split; see Sec. IX-B)",
+    # ---- coupling across geometries and frequencies ----
+    "geometry_sweep/epsilon_across_geometries.csv":
+        "Table XIII, per-user eps across five scenarios",
+    "geometry_sweep/epsilon_across_geometries.json":
+        "Table XIII, summary quantiles and Prop. 4 coverage",
 }
 
 # never ship these: they came from the pre-fix split
