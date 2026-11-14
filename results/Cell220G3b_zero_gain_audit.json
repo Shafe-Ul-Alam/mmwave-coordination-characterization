@@ -1,0 +1,35 @@
+{
+  "train": {
+    "groups": 2000,
+    "entries": 69504000,
+    "zeros": 0,
+    "zero_fraction": 0.0,
+    "groups_containing_a_zero": 0,
+    "negatives": 0,
+    "nonfinite": 0,
+    "min_positive_gain": 3.411324066127871e-24,
+    "min_positive_s": 4.8051397557223685e-15
+  },
+  "val": {
+    "groups": 200,
+    "entries": 6950400,
+    "zeros": 0,
+    "zero_fraction": 0.0,
+    "groups_containing_a_zero": 0,
+    "negatives": 0,
+    "nonfinite": 0,
+    "min_positive_gain": 1.488243842317701e-23,
+    "min_positive_s": 2.1462957575559788e-14
+  },
+  "test": {
+    "groups": 300,
+    "entries": 10425600,
+    "zeros": 0,
+    "zero_fraction": 0.0,
+    "groups_containing_a_zero": 0,
+    "negatives": 0,
+    "nonfinite": 0,
+    "min_positive_gain": 3.923705395717475e-24,
+    "min_positive_s": 5.76616770686684e-15
+  }
+}

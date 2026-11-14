@@ -1,0 +1,15 @@
+{
+  "W": 8,
+  "horizon": 5,
+  "purge": 13,
+  "block_frames": 2000,
+  "evaluation": "onset-restricted: windows with y[t-1]=1 excluded",
+  "operating_point": "validation false-alarm budget 10 per 1000 unblocked frames",
+  "model_selection": "validation PR-AUC",
+  "baselines": [
+    "persistence",
+    "current_power",
+    "trend_slope"
+  ],
+  "note": "lead time and false-alarm rate are in FRAMES; converting to seconds requires the DeepSense capture rate, which is not recorded in the .npz and must be cited from the dataset paper."
+}

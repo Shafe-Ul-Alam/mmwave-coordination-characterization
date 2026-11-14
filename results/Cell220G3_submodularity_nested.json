@@ -1,0 +1,57 @@
+{
+  "random": {
+    "tested": 20000,
+    "violations": 0,
+    "worst_absolute": 1.1368683772161603e-13,
+    "worst_relative": 4.2776926414372455e-16
+  },
+  "exhaustive": {
+    "tested": 29160,
+    "violations": 0,
+    "worst_absolute": 2.842170943040401e-14,
+    "worst_relative": 2.9208434990201397e-16
+  },
+  "monotonicity": {
+    "tested": 3840,
+    "violations": 0
+  },
+  "normalisation": {
+    "violations": 0
+  },
+  "kappa_sweep": {
+    "q0.00": {
+      "tested": 29160,
+      "violations": 0,
+      "worst": 1.4210854715202004e-14,
+      "pct_below_floor": 0.0
+    },
+    "q0.25": {
+      "tested": 29160,
+      "violations": 0,
+      "worst": 1.4210854715202004e-14,
+      "pct_below_floor": 25.0
+    },
+    "q0.50": {
+      "tested": 29160,
+      "violations": 0,
+      "worst": 7.105427357601002e-15,
+      "pct_below_floor": 50.0
+    },
+    "q0.75": {
+      "tested": 29160,
+      "violations": 0,
+      "worst": 3.552713678800501e-15,
+      "pct_below_floor": 75.0
+    },
+    "q0.95": {
+      "tested": 29160,
+      "violations": 0,
+      "worst": 2.914335439641036e-16,
+      "pct_below_floor": 93.75
+    }
+  },
+  "all_passed": true,
+  "relative_tolerance": 1e-12,
+  "precision": "float64",
+  "v1_defect": "v1 used the stored float32 dtype and an absolute tolerance of 1e-9 against a quantity of order 600; its 292/494 violations were round-off"
+}
